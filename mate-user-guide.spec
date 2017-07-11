@@ -6,16 +6,35 @@ Version:	1.18.0
 Release:	1
 License:	GPLv2+
 Group:		System/Servers
-Url:		http://www.mate-desktop.org
-Source0:	http://pub.mate-desktop.org/releases/%{url_ver}/%{name}-%{version}.tar.xz
+Url:		https://www.mate-desktop.org
+Source0:	https://pub.mate-desktop.org/releases/%{url_ver}/%{name}-%{version}.tar.xz
+BuildArch:	noarch
+
+BuildRequires:  desktop-file-utils
 BuildRequires:	intltool
 BuildRequires:  mate-common
 BuildRequires:	pkgconfig(gtk-doc)
 BuildRequires:	yelp-tools
-BuildArch:	noarch
+
+Requires:       mate-desktop
+Requires:	yelp
 
 %description
-End-users documentation for MATE desktop.
+The MATE Desktop Environment is the continuation of GNOME 2. It provides an
+intuitive and attractive desktop environment using traditional metaphors for
+Linux and other Unix-like operating systems.
+
+MATE is under active development to add support for new technologies while
+preserving a traditional desktop experience.
+
+This package provide documents which will be packaged together and shipped
+as mate-user-guide in the core MATE distribution.
+
+%files -f %{name}.lang
+%doc AUTHORS COPYING README ChangeLog NEWS
+%{_datadir}/applications/mate-user-guide.desktop
+
+#---------------------------------------------------------------------------
 
 %prep
 %setup -q
@@ -29,9 +48,7 @@ End-users documentation for MATE desktop.
 %makeinstall_std
 
 # locales
-%find_lang %{name} --with-gnome
+%find_lang %{name} --with-gnome --all-name
 
-%files -f %{name}.lang
-%doc AUTHORS COPYING README ChangeLog NEWS
-%{_datadir}/applications/mate-user-guide.desktop
-
+%check
+desktop-file-validate %{buildroot}%{_datadir}/applications/%{name}.desktop
