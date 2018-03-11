@@ -1,3 +1,4 @@
-sources:
+removed_sources:
   mate-user-guide-1.18.0.tar.xz: 8de19c7c5a98041f15219c814cc72ab94d79b0a1
-
+sources:
+  mate-user-guide-1.20.0.tar.xz: 31e43207d7173653a39941994ede98db2265c093
