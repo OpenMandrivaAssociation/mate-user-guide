@@ -2,7 +2,7 @@
 
 Summary:	MATE user file sharing
 Name:		mate-user-guide
-Version:	1.20.0
+Version:	1.20.2
 Release:	1
 License:	GPLv2+
 Group:		System/Servers
@@ -38,14 +38,15 @@ as mate-user-guide in the core MATE distribution.
 
 %prep
 %setup -q
+%autopatch -p1
 
 %build
 #NOCONFIGURE=1 ./autogen.sh
 %configure
-%make
+%make_build
 
 %install
-%makeinstall_std
+%make_install
 
 # locales
 %find_lang %{name} --with-gnome --all-name
