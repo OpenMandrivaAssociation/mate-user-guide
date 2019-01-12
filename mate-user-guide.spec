@@ -12,6 +12,7 @@ BuildArch:	noarch
 
 BuildRequires:  desktop-file-utils
 BuildRequires:	intltool
+BuildRequires:  gettext
 BuildRequires:  mate-common
 BuildRequires:	pkgconfig(gtk-doc)
 BuildRequires:	yelp-tools
