@@ -5,7 +5,7 @@ Name:		mate-user-guide
 Version:	1.20.2
 Release:	1
 License:	GPLv2+
-Group:		System/Servers
+Group:		Graphical desktop/Other
 Url:		https://www.mate-desktop.org
 Source0:	https://pub.mate-desktop.org/releases/%{url_ver}/%{name}-%{version}.tar.xz
 BuildArch:	noarch
