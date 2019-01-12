@@ -11,8 +11,8 @@ Source0:	https://pub.mate-desktop.org/releases/%{url_ver}/%{name}-%{version}.tar
 BuildArch:	noarch
 
 BuildRequires:  desktop-file-utils
+BuildRequires:  gettext-devel
 BuildRequires:	intltool
-BuildRequires:  gettext
 BuildRequires:  mate-common
 BuildRequires:	pkgconfig(gtk-doc)
 BuildRequires:	yelp-tools
