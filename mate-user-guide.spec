@@ -2,7 +2,7 @@
 
 Summary:	MATE user file sharing
 Name:		mate-user-guide
-Version:	1.20.2
+Version:	1.22.1
 Release:	1
 License:	GPLv2+
 Group:		Graphical desktop/Other
