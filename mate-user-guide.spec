@@ -52,6 +52,3 @@ as mate-user-guide in the core MATE distribution.
 
 # locales
 %find_lang %{name} --with-gnome --all-name
-
-%check
-desktop-file-validate %{buildroot}%{_datadir}/applications/%{name}.desktop
