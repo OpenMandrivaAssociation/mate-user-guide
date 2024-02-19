@@ -1,24 +1,24 @@
-%define url_ver %(echo %{version}|cut -d. -f1,2)
+%define mate_ver	%(echo %{version}|cut -d. -f1,2)
 
 Summary:	MATE user file sharing
 Name:		mate-user-guide
-Version:	1.26.2
+Version:	1.28.0
 Release:	1
 License:	GPLv2+
 Group:		Graphical desktop/Other
 Url:		https://www.mate-desktop.org
-Source0:	https://pub.mate-desktop.org/releases/%{url_ver}/%{name}-%{version}.tar.xz
+Source0:	https://pub.mate-desktop.org/releases/%{mate_ver}/%{name}-%{version}.tar.xz
 BuildArch:	noarch
 
 BuildRequires:	autoconf-archive
-BuildRequires:  desktop-file-utils
+BuildRequires:	desktop-file-utils
 BuildRequires:	intltool
-BuildRequires:  mate-common
+BuildRequires:	mate-common
 BuildRequires:	pkgconfig(glib-2.0)
 BuildRequires:	pkgconfig(gtk-doc)
 BuildRequires:	yelp-tools
 
-Requires:       mate-desktop
+Requires:	mate-desktop
 Requires:	yelp
 
 %description
